@@ -6,7 +6,9 @@ plugins {
 android {
     namespace = "com.example.icebreaker_janu_f24"
     compileSdk = 34
-
+    buildFeatures{ // view binding enable to connect kt files to xml files
+        viewBinding = true
+ }
     defaultConfig {
         applicationId = "com.example.icebreaker_janu_f24"
         minSdk = 30
@@ -45,4 +47,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(kotlin("script-runtime"))
 }
